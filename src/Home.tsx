@@ -505,7 +505,7 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>Join Funguys!</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
@@ -579,22 +579,12 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>BASIC MEMBERSHIP</GoldTitle></LogoAligner>
+                            <p>Basic membership: 0.5 sol. The basic membership NFTs will be a collection of 6969 unique, computer generated Funguys, on a plain pastel background. All the same physical appearance traits are available on the basic NFT collection, except the basic collection backgrounds are all one solid colour. Holding a basic membership will entitle you to access all the basic features, resources, community, games etc on all Funguys and shroomery.eth projects, including the ability to work with us as DJ or writer or content creator etc, you will not need a VIP membership to participate fully in the community.</p>
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>VIP MEMBERSHIP</GoldTitle></LogoAligner>
+                            <p>VIP membership: 2 sol. The VIP membership NFTs will be a collection of 1691 unique, computer generated Funguys, on special designer backgrounds. Holding a VIP membership will entitle you to all the features of a basic membership but will also allow you to share in all the revenue generated as a protocol including: 3% of all SECONDARY sales of basic membership NFTs, 2% of all SECONDARY sales of VIP membership NFTs, 20% of all advertising income of promotional tokens provided for radio or magazine ads & giveaways (advertising percentages will be finalized when advertising is able to start). VIP members will also have special access to features and articles before they are made available to basic members.</p>
                         </Des>
                         <Des elevation={2}>
                             <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
