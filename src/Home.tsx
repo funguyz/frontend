@@ -482,15 +482,15 @@ const Home = (props: HomeProps) => {
         <main>
             <MainContainer>
                 <WalletContainer>
-                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt=""
+                    <Logo><a href="https://funguy.club" target="_blank" rel="noopener noreferrer"><img alt=""
                                                                                                           src="logo.png"/></a></Logo>
                     <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
+                        <li><a href="https://funguy.club" target="_blank" rel="noopener noreferrer">Home</a>
                         </li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
+                        <li><a href="https://funguys.company.site" target="_blank"
+                               rel="noopener noreferrer">Shop</a></li>
+                        <li><a href="https://funguy.club/whitelist" target="_blank"
+                               rel="noopener noreferrer">whitelist info</a></li>
                     </Menu>
                     <Wallet>
                         {wallet ?
