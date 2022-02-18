@@ -505,11 +505,11 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Funguys Basic Membership!</h2>
+                            <h2>Funguys VIP Membership!</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="funguys.gif"
+                                src="VIP.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
@@ -579,11 +579,11 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Funguys VIP Membership!</h2>
+                            <h2>Funguys Basic Membership!</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="funguys.gif"
+                                src="BASIC.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
