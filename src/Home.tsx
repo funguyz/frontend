@@ -505,7 +505,7 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Join Funguys!</h2>
+                            <h2>Funguys Basic Membership!</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
@@ -579,7 +579,7 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Join Funguys!</h2>
+                            <h2>Funguys VIP Membership!</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
