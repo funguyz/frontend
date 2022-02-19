@@ -667,15 +667,7 @@ const Home = (props: HomeProps) => {
                             <p>income of promotional tokens provided for radio or magazine ads & giveaways (advertising percentages will be finalized when advertising is able to start).</p>
                             <p>VIP members will also have special access to features and articles before they are made available to basic members.</p>
                         </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
+
                     </DesContainer>
                 </MintContainer>
             </MainContainer>
