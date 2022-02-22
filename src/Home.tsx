@@ -501,8 +501,6 @@ const Home = (props: HomeProps) => {
                     </Wallet>
                 </WalletContainer>
                 <ShimmerTitle>WHITELISTED BASIC MINTING AVAILABLE LATER TODAY</ShimmerTitle>
-                 <h2><a href="https://frontend-mu-jade.vercel.app/" target="_blank"
-                               rel="noopener noreferrer">CLICK HERE FOR VIP NFT</a></h2>
                 <br/>
 
                 <MintContainer>
@@ -587,10 +585,9 @@ const Home = (props: HomeProps) => {
                         <Des elevation={2}>
                             <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>BASIC MEMBERSHIP</GoldTitle></LogoAligner>
                             <p>Basic membership: 0.5 sol.</p>
-                            <p>The basic membership NFTs will be a collection of 6969 unique,</p>
-                            <p>computer generated Funguys, on a plain pastel background.</p>
-                            <p>All the same physical appearance traits are available on the basic NFT collection,</p>
-                            <p>except the basic collection backgrounds are all one solid colour.</p>
+                            <p>The basic membership NFTs will be a collection of 6969 unique, computer generated Funguys,</p>
+                            <p>on a plain pastel background. All the same physical appearance traits are available</p>
+                            <p>on the basic NFT collection, except the basic collection backgrounds are all one solid colour.</p>
                             <p>Holding a basic membership will entitle you to access all the basic features,</p>
                             <p>resources, community, games etc on all Funguys and shroomery.eth projects,</p>
                             <p>including the ability to work with us as DJ or writer or content creator etc,</p>
