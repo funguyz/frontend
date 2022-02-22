@@ -74,7 +74,6 @@ const NFT = styled(Paper)`
   padding: 5px 20px 20px 20px;
   flex: 1 1 auto;
   background-color: var(--card-background-color) !important;
-
 `;
 const Des = styled(NFT)`
   text-align: left;
@@ -92,20 +91,17 @@ const MintButtonContainer = styled.div`
   button.MuiButton-contained:not(.MuiButton-containedPrimary).Mui-disabled {
     color: #464646;
   }
-
   button.MuiButton-contained:not(.MuiButton-containedPrimary):hover,
   button.MuiButton-contained:not(.MuiButton-containedPrimary):focus {
     -webkit-animation: pulse 1s;
     animation: pulse 1s;
     box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
   }
-
   @-webkit-keyframes pulse {
     0% {
       box-shadow: 0 0 0 0 #ef8f6e;
     }
   }
-
   @keyframes pulse {
     0% {
       box-shadow: 0 0 0 0 #ef8f6e;
@@ -115,7 +111,6 @@ const MintButtonContainer = styled.div`
 
 const Logo = styled.div`
   flex: 0 0 auto;
-
   img {
     height: 60px;
   }
@@ -124,10 +119,8 @@ const Menu = styled.ul`
   list-style: none;
   display: inline-flex;
   flex: 1 0 auto;
-
   li {
     margin: 0 12px;
-
     a {
       color: var(--main-text-color);
       list-style-image: none;
@@ -139,17 +132,14 @@ const Menu = styled.ul`
       touch-action: manipulation;
       transition: color 0.3s;
       padding-bottom: 15px;
-
       img {
         max-height: 26px;
       }
     }
-
     a:hover, a:active {
       color: rgb(131, 146, 161);
       border-bottom: 4px solid var(--title-text-color);
     }
-
   }
 `;
 
@@ -163,7 +153,6 @@ const SolExplorerLink = styled.a`
   outline: none;
   text-decoration: none;
   text-size-adjust: 100%;
-
   :hover {
     border-bottom: 2px solid var(--title-text-color);
   }
@@ -220,7 +209,6 @@ const BorderLinearProgress = styled(LinearProgress)`
   > div.MuiLinearProgress-barColorPrimary{
     background-color:var(--title-text-color) !important;
   }
-
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
@@ -249,7 +237,6 @@ const GoldTitle = styled.h2`
 const LogoAligner = styled.div`
   display: flex;
   align-items: center;
-
   img {
     max-height: 35px;
     margin-right: 10px;
@@ -491,6 +478,8 @@ const Home = (props: HomeProps) => {
                                rel="noopener noreferrer">Shop</a></li>
                         <li><a href="https://funguy.club/whitelist" target="_blank"
                                rel="noopener noreferrer">whitelist info</a></li>
+                         <li><a href="https://frontend-5ot5kr4g2-funguyz1.vercel.app/" target="_blank"
+                               rel="noopener noreferrer">BASIC MEMBERSHIP</a></li>
                     </Menu>
                     <Wallet>
                         {wallet ?
@@ -498,14 +487,15 @@ const Home = (props: HomeProps) => {
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle>WHITELISTED VIP MINTING AVAILABLE - BASIC AND PUBLIC COMING SOON</ShimmerTitle>
+                <ShimmerTitle>WHITELISTED VIP MINTING AVAILABLE NOW</ShimmerTitle>
                 <br/>
-
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
                             <h2>Funguys VIP Membership!</h2>
+                            <h2><a href="https://frontend-5ot5kr4g2-funguyz1.vercel.app/" target="_blank"
+                               rel="noopener noreferrer">CLICK HERE FOR BASIC NFT</a></h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
@@ -577,97 +567,32 @@ const Home = (props: HomeProps) => {
                                 Explorer</SolExplorerLink>}
                         </NFT>
                     </DesContainer>
+
                     <DesContainer>
-                        <NFT elevation={3}>
-                            <h2>Funguys Basic Membership!</h2>
-                            <br/>
-                            <div><Price
-                                label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="BASIC.gif"
-                                alt="NFT To Mint"/></div>
-                            <br/>
-                            {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
-                              <h3>You have {whitelistTokenBalance} whitelist mint(s) remaining.</h3>}
-                            {wallet && isActive &&
-                                /* <p>Total Minted : {100 - (itemsRemaining * 100 / itemsAvailable)}%</p>}*/
-                              <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
-                            {wallet && isActive && <BorderLinearProgress variant="determinate"
-                                                                         value={100 - (itemsRemaining * 100 / itemsAvailable)}/>}
-                            <br/>
-                            <MintButtonContainer>
-                                {!isActive && candyMachine?.state.goLiveDate ? (
-                                    <Countdown
-                                        date={toDate(candyMachine?.state.goLiveDate)}
-                                        onMount={({completed}) => completed && setIsActive(true)}
-                                        onComplete={() => {
-                                            setIsActive(true);
-                                        }}
-                                        renderer={renderCounter}
-                                    />) : (
-                                    !wallet ? (
-                                            <ConnectButton>Connect Wallet</ConnectButton>
-                                        ) :
-                                        candyMachine?.state.gatekeeper &&
-                                        wallet.publicKey &&
-                                        wallet.signTransaction ? (
-                                            <GatewayProvider
-                                                wallet={{
-                                                    publicKey:
-                                                        wallet.publicKey ||
-                                                        new PublicKey(CANDY_MACHINE_PROGRAM),
-                                                    //@ts-ignore
-                                                    signTransaction: wallet.signTransaction,
-                                                }}
-                                                // // Replace with following when added
-                                                // gatekeeperNetwork={candyMachine.state.gatekeeper_network}
-                                                gatekeeperNetwork={
-                                                    candyMachine?.state?.gatekeeper?.gatekeeperNetwork
-                                                } // This is the ignite (captcha) network
-                                                /// Don't need this for mainnet
-                                                clusterUrl={rpcUrl}
-                                                options={{autoShowModal: false}}
-                                            >
-                                                <MintButton
-                                                    candyMachine={candyMachine}
-                                                    isMinting={isMinting}
-                                                    isActive={isActive}
-                                                    isSoldOut={isSoldOut}
-                                                    onMint={onMint}
-                                                />
-                                            </GatewayProvider>
-                                        ) : (
-                                            <MintButton
-                                                candyMachine={candyMachine}
-                                                isMinting={isMinting}
-                                                isActive={isActive}
-                                                isSoldOut={isSoldOut}
-                                                onMint={onMint}
-                                            />
-                                        ))}
-                            </MintButtonContainer>
-                            <br/>
-                            {wallet && isActive && solanaExplorerLink &&
-                              <SolExplorerLink href={solanaExplorerLink} target="_blank">View on Solana
-                                Explorer</SolExplorerLink>}
-                        </NFT>
-                    </DesContainer>
-                    <DesContainer>
+                            <Des elevation={2}>
+                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>VIP MEMBERSHIP</GoldTitle></LogoAligner>
+                            <p>VIP membership: 2 sol.</p>
+                            <p>The VIP membership NFTs will be a collection of 1691 unique, computer generated Funguys,</p>
+                            <p>on special designer backgrounds. Holding a VIP membership will entitle you to all the features of a</p>
+                            <p>basic membership but will also allow you to share in all the revenue generated as a protocol including:</p>
+                            <li>3% of all SECONDARY sales of basic membership NFTs,</li>
+                            <li>2% of all SECONDARY sales of VIP membership NFTs,</li>
+                            <li>~20% of all advertising</li>
+                            <li>portion of promotional tokens provided for radio or magazine ads & giveaways</li>
+                            <p>(advertising percentages will be finalized when advertising is able to start).</p>
+                            <p>VIP members will also have special access to features and articles before they are available to basic members.</p>
+                        </Des>
                         <Des elevation={2}>
                             <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>BASIC MEMBERSHIP</GoldTitle></LogoAligner>
-                            <p>Basic membership: 0.5 sol. The basic membership NFTs will be a collection of 6969 unique, computer generated Funguys, on a plain pastel background.</p>
-                            <p>All the same physical appearance traits are available on the basic NFT collection, except the basic collection backgrounds are all one solid colour.</p>
-                            <p>Holding a basic membership will entitle you to access all the basic features, resources, community, games etc on all Funguys and shroomery.eth projects,</p>
-                            <p>including the ability to work with us as DJ or writer or content creator etc, you will not need a VIP membership to participate fully in the community.</p>
+                            <p>Basic membership: 0.5 sol.</p>
+                            <p>The basic membership NFTs will be a collection of 6969 unique, computer generated Funguys,</p>
+                            <p>on a plain pastel background. All the same physical appearance traits are available</p>
+                            <p>on the basic NFT collection, except the basic collection backgrounds are all one solid colour.</p>
+                            <p>Holding a basic membership will entitle you to access all the basic features, resources, community,</p>
+                            <p>games etc on all Funguys and shroomery.eth projects, including the ability to work with us as DJ</p>
+                            <p>or writer or content creator etc, you will not need a VIP membership to participate fully in the community.</p>
                         </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>VIP MEMBERSHIP</GoldTitle></LogoAligner>
-                            <p>VIP membership: 2 sol. The VIP membership NFTs will be a collection of 1691 unique, computer generated Funguys, on special designer backgrounds.</p>
-                            <p>Holding a VIP membership will entitle you to all the features of a basic membership but will also allow you to share in all the revenue generated</p>
-                            <p>as a protocol including: 3% of all SECONDARY sales of basic membership NFTs, 2% of all SECONDARY sales of VIP membership NFTs, 20% of all advertising</p>
-                            <p>income of promotional tokens provided for radio or magazine ads & giveaways (advertising percentages will be finalized when advertising is able to start).</p>
-                            <p>VIP members will also have special access to features and articles before they are made available to basic members.</p>
-                        </Des>
-
+                    
                     </DesContainer>
                 </MintContainer>
             </MainContainer>
