@@ -494,7 +494,7 @@ const Home = (props: HomeProps) => {
                     <DesContainer>
                         <NFT elevation={3}>
                             <h2>Funguys VIP Membership!</h2>
-                            <h2><a href="https://frontend-mu-jade.vercel.app/" target="_blank"
+                            <h2><a href="https://frontend-5ot5kr4g2-funguyz1.vercel.app/" target="_blank"
                                rel="noopener noreferrer">CLICK HERE FOR BASIC NFT</a></h2>
                             <br/>
                             <div><Price
