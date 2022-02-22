@@ -478,7 +478,7 @@ const Home = (props: HomeProps) => {
                                rel="noopener noreferrer">Shop</a></li>
                         <li><a href="https://funguy.club/whitelist" target="_blank"
                                rel="noopener noreferrer">whitelist info</a></li>
-                         <li><a href="https://funguy.club/mint" target="_blank"
+                         <li><a href="https://frontend-5ot5kr4g2-funguyz1.vercel.app/" target="_blank"
                                rel="noopener noreferrer">BASIC MEMBERSHIP</a></li>
                     </Menu>
                     <Wallet>
