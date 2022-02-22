@@ -501,8 +501,8 @@ const Home = (props: HomeProps) => {
                     </Wallet>
                 </WalletContainer>
                 <ShimmerTitle>WHITELISTED BASIC MINTING AVAILABLE LATER TODAY</ShimmerTitle>
-                 <ShimmerTitle><a href="https://frontend-mu-jade.vercel.app/" target="_blank"
-                               rel="noopener noreferrer">CLICK HERE FOR VIP NFT</a></ShimmerTitle>
+                 <h2><a href="https://frontend-mu-jade.vercel.app/" target="_blank"
+                               rel="noopener noreferrer">CLICK HERE FOR VIP NFT</a></h2>
                 <br/>
 
                 <MintContainer>
