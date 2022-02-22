@@ -588,10 +588,9 @@ const Home = (props: HomeProps) => {
                             <p>The basic membership NFTs will be a collection of 6969 unique, computer generated Funguys,</p>
                             <p>on a plain pastel background. All the same physical appearance traits are available</p>
                             <p>on the basic NFT collection, except the basic collection backgrounds are all one solid colour.</p>
-                            <p>Holding a basic membership will entitle you to access all the basic features,</p>
-                            <p>resources, community, games etc on all Funguys and shroomery.eth projects,</p>
-                            <p>including the ability to work with us as DJ or writer or content creator etc,</p>
-                            <p>you will not need a VIP membership to participate fully in the community.</p>
+                            <p>Holding a basic membership will entitle you to access all the basic features, resources, community,</p>
+                            <p>games etc on all Funguys and shroomery.eth projects, including the ability to work with us as DJ</p>
+                            <p>or writer or content creator etc, you will not need a VIP membership to participate fully in the community.</p>
                         </Des>
                         <Des elevation={2}>
                             <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>VIP MEMBERSHIP</GoldTitle></LogoAligner>
