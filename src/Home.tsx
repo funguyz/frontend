@@ -509,6 +509,8 @@ const Home = (props: HomeProps) => {
                     <DesContainer>
                         <NFT elevation={3}>
                             <h2>Funguys BASIC Membership!</h2>
+                            <h2><a href="https://frontend-mu-jade.vercel.app/" target="_blank"
+                               rel="noopener noreferrer">CLICK HERE FOR VIP NFT</a></h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
