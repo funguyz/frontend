@@ -595,16 +595,15 @@ const Home = (props: HomeProps) => {
                         <Des elevation={2}>
                             <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>VIP MEMBERSHIP</GoldTitle></LogoAligner>
                             <p>VIP membership: 2 sol.</p>
-                            <p>The VIP membership NFTs will be a collection of 1691 unique,</p>
-                            <p>computer generated Funguys, on special designer backgrounds.</p>
-                            <p>Holding a VIP membership will entitle you to all the features of a</p>
-                            <p>basic membership but will also allow you to share in all the revenue generated</p>
-                            <p>as a protocol including: 3% of all SECONDARY sales of basic membership NFTs,</p>
-                            <p>2% of all SECONDARY sales of VIP membership NFTs, 20% of all advertising</p>
-                            <p>income of promotional tokens provided for radio or magazine ads & giveaways</p>
+                            <p>The VIP membership NFTs will be a collection of 1691 unique, computer generated Funguys,</p>
+                            <p>on special designer backgrounds. Holding a VIP membership will entitle you to all the features of a</p>
+                            <p>basic membership but will also allow you to share in all the revenue generated as a protocol including:</p>
+                            <li>3% of all SECONDARY sales of basic membership NFTs,</li>
+                            <li>2% of all SECONDARY sales of VIP membership NFTs,</li>
+                            <li>~20% of all advertising</li>
+                            <li>portion of promotional tokens provided for radio or magazine ads & giveaways</li>
                             <p>(advertising percentages will be finalized when advertising is able to start).</p>
-                            <p>VIP members will also have special access to features and articles</p>
-                            <p>before they are made available to basic members.</p>
+                            <p>VIP members will also have special access to features and articles before they are available to basic members.</p>
                         </Des>
 
                     </DesContainer>
